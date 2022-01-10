@@ -17,7 +17,7 @@ print(len(swim_options), "swim options")
 print(swim_options[0])
 print(len(walk_options), "walk options")
 
-random_swim = random.randint(0, 3)
+random_swim = random.randint(0, 5)
 print("Welcome," , name , ",this is sure to be a wild ride!")
 # commas add a space automatically
 answer = input("You are on a dirt road, your only options are left or right\
@@ -30,25 +30,25 @@ if answer == "left":
     Type walk or swim: ").lower()
   if answer == "swim":
     # random option
-    swim_result = print(swim_options[random_swim])
-    if swim_result == swim_options[0]:
+    answer = print(swim_options[random_swim])
+    if answer == swim_options[0]:
       print("Sorry buddy, you sunk like a stone.")
       quit()
-    if swim_result == swim_options[1]:
+    elif answer == swim_options[1]:
       print("Catching your breath on the shore you notice the sun will set soon.")
-      setting_sun = input("Would you like to continue walking or build shelter? Type walk/shelter: ").lower()
+      answer = input("Would you like to continue walking or build shelter? Type walk/shelter: ").lower()
       if setting_sun == "walk":
         print("result from walking")
-    if swim_result == swim_options[2]:
+    elif answer == swim_options[2]:
       answer = input("He reaches his hand down to you, you notice\
         blood on his hand. Do you run or grab his hand or run? Type Grab/Run").lower()
-    if swim_result == swim_options[3]:
+    elif answer == swim_options[3]:
       print("You wake up to the howling of wolves.")
       quit()
-    if swim_result == swim_options[4]:
+    elif answer == swim_options[4]:
       print("Your cramp gets serious once on shore.")
       quit()
-    if swim_result == swim_options[5]:
+    elif answer == swim_options[5]:
       print("Feeling confident and full of vigor\
         you decide to sprint into the forest.")
       quit()
@@ -63,7 +63,9 @@ if answer == "left":
 # user takes a right instead of a left
 elif answer == "right":
   answer = input("Right you are! While walking you enjoy a beautiful sunset, but you need to find shelter soon\
-    do you look for a town or build a shelter? Type town/shelter: ")
+    do you look for a town or build a shelter? Type town/shelter: ").lower()
+  if answer == "shelter":
+    print("Great call, print statements")
 
 else:
   print("Not a vaild option. You lose.")
