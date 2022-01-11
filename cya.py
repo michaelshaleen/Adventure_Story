@@ -32,15 +32,15 @@ if answer == "left":
     # random option
     answer = print(swim_options[random_swim])
     if answer == swim_options[0]:
-      print("Sorry buddy, you sunk like a stone.")
-      quit()
+        print("Sorry buddy, you sunk like a stone.")
+        quit()
     elif answer == swim_options[1]:
-      print("Catching your breath on the shore you notice the sun will set soon.")
-      answer = input("Would you like to continue walking or build shelter? Type walk/shelter: ").lower()
-      if setting_sun == "walk":
-        print("result from walking")
+        print("Catching your breath on the shore you notice the sun will set soon.")
+        answer = input("Would you like to continue walking or build shelter? Type walk/shelter: ").lower()
+        if setting_sun == "walk":
+          print("result from walking")
     elif answer == swim_options[2]:
-      answer = input("He reaches his hand down to you, you notice\
+        answer = input("He reaches his hand down to you, you notice\
         blood on his hand. Do you run or grab his hand or run? Type Grab/Run").lower()
     elif answer == swim_options[3]:
       print("You wake up to the howling of wolves.")
