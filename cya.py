@@ -13,17 +13,16 @@ walk_options = ["while walking you end up feeling ill, and actually pass out fro
   , "during a lovely walk through an enchanted forest you are greeted by an elf!", "Walking around a\
     river takes a long time.",]
 
-print(len(swim_options), "swim options")
-print(swim_options[0])
-print(len(walk_options), "walk options")
-
 random_swim = random.randint(0, 5)
 random_walk = random.randint(0, 2)
 print("Welcome,", name ,",this is sure to be a wild ride!")
 # commas add a space automatically
-answer = input("You are on a dirt road, your only options are left or right\
-  which way would you like to go? ").lower()
 
+
+answer = input("You are on a dirt road, your only options are left or right\
+    which way would you like to go? Type Left/Right or Q to quit: ").lower()
+if answer == 'q':
+  quit() 
 
 # user decides to go left from dirt road
 if answer == "left":
@@ -55,14 +54,12 @@ if answer == "left":
       quit()
 
 
-  if answer == "walk":
-    random_walk == random.randint(0, 1)
-    answer = walk_options[random_walk]
-    print(answer,"your walk answer here")
-    if answer == 0:
-      print("zero index")
-    elif answer == 1:
-      print("one index")
+  elif answer == "walk":
+    answer = input("Walk on your hands or on your feet? Hands/Feet ")
+    if answer == "hands":
+      print("Feet are overrated anyways.")
+    elif answer == "feet":
+      print("Foot boy")
 
 
 
@@ -89,5 +86,3 @@ elif answer == "right":
       elif answer == 'bed':
         print("Real exciting...lying in bed...alone... you lose. ")
 # end options if path right is taken
-else:
-  print("Not a valid option. You lose.")
