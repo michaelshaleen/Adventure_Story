@@ -18,7 +18,8 @@ print(swim_options[0])
 print(len(walk_options), "walk options")
 
 random_swim = random.randint(0, 5)
-print("Welcome," , name , ",this is sure to be a wild ride!")
+random_walk = random.randint(0, 2)
+print("Welcome,", name ,",this is sure to be a wild ride!")
 # commas add a space automatically
 answer = input("You are on a dirt road, your only options are left or right\
   which way would you like to go? ").lower()
@@ -55,7 +56,13 @@ if answer == "left":
 
 
   if answer == "walk":
-    print()
+    random_walk == random.randint(0, 1)
+    answer = walk_options[random_walk]
+    print(answer,"your walk answer here")
+    if answer == 0:
+      print("zero index")
+    elif answer == 1:
+      print("one index")
 
 
 
@@ -65,7 +72,22 @@ elif answer == "right":
   answer = input("Right you are! While walking you enjoy a beautiful sunset, but you need to find shelter soon\
     do you look for a town or build a shelter? Type town/shelter: ").lower()
   if answer == "shelter":
-    print("Great call, print statements")
-
+    print("Great call.")
+    answer = input("What will you use to build a shelter genius? Sticks/Wet Leaves ").lower()
+    if answer == "wet leaves":
+      print("your wet leaves dripped on you while you slept, you died from covid.")
+    elif answer == "sticks":
+      print("Your stick mansion caught on fire with you in it, RIP user.")
+  elif answer == "town":
+    answer = input("Great choice, now decide, milk or rainwater? ").lower()
+    if answer == "rainwater":
+      print("You lose.")
+    elif answer == "milk":
+      answer = input("Excellent choice my user! Where will you go next? Bed/Tavern ").lower()
+      if answer == "tavern":
+        print("You drunk, you lose.")
+      elif answer == 'bed':
+        print("Real exciting...lying in bed...alone... you lose. ")
+# end options if path right is taken
 else:
-  print("Not a vaild option. You lose.")
+  print("Not a valid option. You lose.")
