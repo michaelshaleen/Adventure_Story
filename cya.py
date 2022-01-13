@@ -16,11 +16,12 @@ walk_options = ["while walking you end up feeling ill, and actually pass out fro
 random_swim = random.randint(0, 1)
 random_walk = random.randint(0, 2)
 print("Welcome,", name ,",this is sure to be a wild ride!")
+
+# loop to display all options in organized fashion
 count = 0
 for i in swim_options:
   count += 1
   print(count, i, "swim options")
-# commas add a space automatically
 
 
 answer = input("You are on a dirt road, your only options are left or right\
