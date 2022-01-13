@@ -16,39 +16,54 @@ walk_options = ["while walking you end up feeling ill, and actually pass out fro
 random_swim = random.randint(0, 1)
 random_walk = random.randint(0, 2)
 print("Welcome,", name ,",this is sure to be a wild ride!")
+count = 0
+for i in swim_options:
+  count += 1
+  print(count, i, "swim options")
 # commas add a space automatically
 
 
 answer = input("You are on a dirt road, your only options are left or right\
     which way would you like to go? Type Left/Right or Q to quit: ").lower()
 if answer == 'q':
-  quit() 
+  quit()
 
 # user decides to go left from dirt road
 if answer == "left":
   answer = input("You arrive at a river. You can walk around it or swim through it.\
     Type walk or swim: ").lower()
-    # left > swim
   if answer == "swim":
     answer = swim_options[random_swim]
     if answer == swim_options[0]:
       print(answer, "another one bites the bottom of a river. You lose.")
     elif answer == swim_options[1]:
       print(answer, "well done king or king-et.")
-      answer = input("Feeling great, do you want to rest or keep walking? Type Walk/Rest: ")
+      answer = input("Feeling great, do you want to rest or keep walking? Type Walk/Rest: ").lower()
+      if answer == "walk":
+        print("While walking you are bitten by the world's largest ant and you die a slow and painful, super painful death. You lose.")
+    elif answer == swim_options[2]:
+      print(answer, "index two")
+    if answer == swim_options[3]:
+      print(answer, "index three")
+    elif answer == swim_options[4]:
+      print(answer, "index four")
+    elif answer == swim_options[5]:
+      print(answer, "index five")
+    elif answer == swim_options[6]:
+      print("You crazy son of a ..., you win! You bloody win! You find a beautiful oasis with\
+        a friendly population who takes you in and you live decently ever after. You win!")
+
     # answer = input("Swimming is quite challenging, do you blow out your air and walk along\
     # the bottom or keep swimming? Type Swim/Sink").lower()
 
-  
-
 # left > walk
   elif answer == "walk":
-    answer = input("Walk on your hands or on your feet? Hands/Feet ")
+    answer = input("Walk on your hands or on your feet? Hands/Feet ").lower()
     if answer == "hands":
-      print("Feet are overrated anyways.")
+      print("Feet are overrated anyways. Until you palm a sharp stake with your favorite hand and meet your end via blood loss. You lose.")
     elif answer == "feet":
-      print("Foot boy")
-
+      print("You hear someone shout 'Foot boy!' from the trees, you are apparently in the wrong neighborhood and are eaten for dinner. You lose. ")
+#  end options for left > walk
 
 
 
