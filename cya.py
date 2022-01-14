@@ -24,15 +24,13 @@ for i in swim_options:
   print(count, i, "swim options")
 
 
-answer = input("You are on a dirt road, your only options are left or right\
-    which way would you like to go? Type Left/Right or Q to quit: ").lower()
+answer = input("You are on a dirt road, your only options are left or right which way would you like to go? \nType Left/Right or Q to quit: ").lower()
 if answer == 'q':
   quit()
 
 # user decides to go left from dirt road
 if answer == "left":
-  answer = input("You arrive at a river. You can walk around it or swim through it.\
-    Type walk or swim: ").lower()
+  answer = input("You arrive at a river. You can walk around it or swim through it.\nType walk or swim: ").lower()
   if answer == "swim":
     answer = swim_options[random_swim]
     if answer == swim_options[0]:
